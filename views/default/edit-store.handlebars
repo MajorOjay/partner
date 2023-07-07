@@ -1,0 +1,154 @@
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Content Header (Page header) -->
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">My Store</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active" aria-current="page">Edit Store</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+		</div>	  
+
+		<!-- Main content -->
+		<section class="content">
+
+
+			<div class="row">			  
+				<div class="col-lg-12 col-12">
+					  <div class="box">
+						<div class="box-header with-border">
+						  <h4 class="box-title"><i class="ti-home mr-15"></i>Update Store Information</h4>
+						</div>
+						<!-- /.box-header -->
+						<form class="form" action="/edit-store/{{store.id}}?newMethod=PUT" method="POST">
+							<div class="box-body">
+								<div class="row">
+								  <div class="col-md-6">
+									<div class="form-group">
+									  <label>Store Name</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="ti-home"></i></span>
+											</div>
+											<input required type="text" class="form-control" placeholder="Store Name" name="name" value="{{store.name}}">
+										</div>
+									</div>
+								  </div>
+								  <div class="col-md-6">
+									<div class="form-group">
+									  <label>Address</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="ti-map"></i></span>
+											</div>
+									  		<input required type="text" class="form-control" placeholder="Address" name="address" value="{{store.address}}" >	
+										</div>
+									</div>
+								  </div>
+								</div>
+								<div class="row">
+								  <div class="col-md-6">
+									<div class="form-group">
+									  <label>Category</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="ti-info"></i></span>
+											</div>
+											<select required class="form-control" name="category" value="{{store.category}}">
+												<option>Bakery</option>
+												<option>Bar</option>
+												<option>Boutique</option>
+												<option>Brewery</option>
+												<option>Electronics</option>
+												<option>Gas station</option>
+												<option>Grocery</option>
+												<option>Gym</option>
+												<option>Hardware</option>
+												<option>Liquor</option>
+												<option>Recreational</option>
+												<option>Restaurant</option>
+												<option>Specialty</option>
+												<option>Supermarket</option>
+												<option>Others</option>
+											</select>
+										</div>
+									</div>
+								  </div>
+								  <div class="col-md-6">
+									<div class="form-group">
+										<label>Number of POS</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="ti-dashboard"></i></span>
+											</div>
+											<input required class="form-control" type="number"  value="{{store.no_of_pos}}" id="example-number-input" name="no_of_pos">
+										</div>
+								    </div>
+								 </div>
+								  <div class="col-md-6">
+									<div class="form-group">
+									  <label>City</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="ti-map"></i></span>
+											</div>
+											<select class="form-control" name="city"  value="{{store.city}}" required>
+												<option>Calgary</option>
+												<option>Calgary</option>
+												<option>Calgary</option>
+											</select>
+										</div>
+									</div>
+								  </div>
+								  <div class="col-md-6">
+									<div class="form-group">
+									  <label>Province</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="ti-key"></i></span>
+											</div>
+											<select class="form-control" name="province"  value="{{store.province}}" required>
+												<option>Albany</option>
+												<option>Albany</option>
+												<option>Albany</option>
+											</select>
+										</div>
+									</div>
+								  </div>
+							<!-- /.box-body -->
+								  <div class="col-12">
+									<div class="form-group">
+										<label><span style="color: red; font-size:20px">*</span>Status :</label>
+										<div class="c-inputs-stacked">
+											<input name="status" type="radio" id="active" value="Active" checked>
+											<label for="active" class="mr-30">Activate</label>
+											<input name="status" type="radio" id="disable" value="Disabled">
+											<label for="disable" class="mr-30">Disable</label>
+										</div>
+									</div>
+								 </div> 
+							<div class="box-footer">
+								<button type="submit" class="btn btn-primary pull-right">
+								  <i class="ti-save-alt"></i> Update
+								</button>
+							</div>  
+						</form>
+						
+					  </div>
+					  <!-- /.box -->			
+				</div>  
+			</div>
+
+		</section>
+	  </div>
+  </div>
+
+  

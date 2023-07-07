@@ -1,0 +1,84 @@
+  
+
+  <div class="content-wrapper">
+										{{#if msg}}
+			<div class="container">
+			<div class="alert alert-success alert-dismissable">
+				<a href="#" style="text-decoration: none; color:#fff" class="close" data-dismiss="alert" aria-label="close">x</a>
+				<strong>{{msg}}</strong>
+			</div>
+		</div>
+{{/if}} 
+
+	  <div class="container-full">
+
+
+		<!-- Content Header (Page header) -->
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">My Stores</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item" aria-current="page">All Stores</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<!-- Main content -->
+		<section class="content">
+
+		  <div class="row">
+			  <div class="col-12">
+				<div class="box">
+				  <div class="box-body">
+					<div class="table-responsive">
+						<table id="productorder" class="table table-hover no-wrap product-order" data-page-size="10">
+							<thead>
+								<tr>
+									 <th>Store Name</th>
+									 <th>City</th>
+									 <th>Province</th>
+									 <th>Category</th>
+									 <th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{#each store}}
+								<tr>
+									<td data-toggle="tooltip" data-original-title="click to visit"><a href="/store/{{id}}">{{name}}</a> </td>
+									<td>{{city}}</td>
+									<td>{{province}}</td>
+									<td>{{category}}</td>
+									<td><span class="badge badge-pill badge-success">{{status}}</span></td>
+									<td>
+										<a href="/store/{{id}}" class="text-success mr-10" data-toggle="tooltip" data-original-title="View">
+											<i class="ti-eye"></i>
+										</a> 
+										<a href="/edit-store/{{id}}" class="text-info mr-10" data-toggle="tooltip" data-original-title="Edit">
+											<i class="ti-marker-alt"></i>
+										</a> 
+
+											<a href="/delete-store/{{id}}" class="text-danger" data-original-title="Delete" data-toggle="tooltip">
+												<i class="ti-trash"></i>
+											</a>
+									</td>
+								</tr>
+								{{/each}}
+							</tbody>						
+						</table>
+					</div>
+				  </div>
+				</div>
+			  </div>		  
+		  </div>
+
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>

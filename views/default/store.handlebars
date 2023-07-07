@@ -1,0 +1,120 @@
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Content Header (Page header) -->
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">My Store</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active" aria-current="page">{{store.name}}</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<!-- Main content -->
+		<section class="content">
+
+		  <div class="row">
+			<div class="col-12 col-lg-7 col-xl-8">
+				
+					<div class="box">
+						{{#if noScan}}
+						<div class="box-header with-border">				
+							<h6 class="box-subtitle">No scan request from {{store.name}} yet</h6>
+						</div>
+
+						{{else}}
+						<div class="box-header with-border">						
+							<h4 class="box-title">Generated QR Codes</h4>
+							<h6 class="box-subtitle">All Scan requests from {{store.name}}</h6>
+						</div>
+						<div class="box-body p-15">						
+							<div class="table-responsive">
+								<table id="tickets" class="table mt-0 table-hover no-wrap table-borderless" data-page-size="10">
+									<thead>
+										<tr>
+											<th>Scan ID</th>
+											<th>QR Code</th>
+											<th>Time Generated</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>#12365791</td>
+									  		<td><img src="../images/qr.png" alt="product" width="80"></td>
+											<td>14-10-2023</td>
+											<td><span class="badge badge-warning">Not Scanned</span> </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						{{/if}}
+					</div>
+			  <!-- /.nav-tabs-custom -->
+			</div>
+			<!-- /.col -->		
+
+			<div class="col-12 col-lg-5 col-xl-4">
+				 <div class="box box-widget widget-user">
+					<!-- Add the bg color to the header using any of the bg-* classes -->
+					<div class="widget-user-header bg-black" style="background: url('../images/10.jpg') center center;">
+					  <h3 class="widget-user-username">{{store.name}}</h3>
+					  <h6 class="widget-user-desc">{{store.city}}</h6>
+					</div>
+					<div class="widget-user-image">
+					  <img class="rounded-circle" src="../images/jd.png" alt="User Avatar">
+					</div>
+					<div class="box-footer">
+					  <div class="row">
+						<div class="col-sm-4">
+						  <div class="description-block">
+							<h5 class="description-header">0</h5>
+							<span class="description-text">Total Scan</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+						<div class="col-sm-4 br-1 bl-1">
+						  <div class="description-block">
+							<h5 class="description-header">0</h5>
+							<span class="description-text">This Month</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+						<div class="col-sm-4">
+						  <div class="description-block">
+							<h5 class="description-header">$0</h5>
+							<span class="description-text">Invoice</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+					  </div>
+					  <div class="row"> <div class="input-group-append">
+								
+							<div class="box-footer text-right">
+								<a href="/setup/{{store.id}}" class="btn btn-rounded btn-primary pull-right">
+								  <i class="ti-settings"></i> Setup Store
+								</a>
+							</div> 
+					  </div>
+					  <!-- /.row -->
+					</div>
+				  </div>
+				  
+			  </div>
+		  	</div>
+
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>

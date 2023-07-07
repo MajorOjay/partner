@@ -1,0 +1,134 @@
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Content Header (Page header) -->
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">Store Settings</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								{{!-- <li class="breadcrumb-item" aria-current="page">Setup {{store.store_name}}</li> --}}
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<!-- Main content -->
+		<section class="content">
+		  <div class="row">
+              
+                <div class="col-12 col-lg-7 col-xl-8">
+                    <div class="box bg-lightest">
+                        <div class="box-header">
+                        <div class="media align-items-top p-0">
+                            <div class="d-lg-flex d-block justify-content-between align-items-center w-p100">
+                                <div class="media-body mb-lg-0 mb-20">
+                                    <p class="font-size-16">
+                                        <a class="hover-primary" href="#"><strong>Quick Setup</strong></a>
+                                    </p>
+                                        <p class="font-size-12">Follow this developer guide to setup your store and integrate with Rezzet</p>
+                                </div>
+                            </div>				  
+                        </div>             
+                        </div>
+                        <div class="box-body">
+                            <div class="chat-box-one2">
+                                <div class="card d-inline-block mb-3 float-left mr-2 no-shadow bg-lighter max-w-p80">
+                                <div class="position-absolute pt-1 pr-2 r-0">
+                                    <span class="text-extra-small text-muted">JSON</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex flex-row pb-2">
+                                        <div class="d-flex flex-grow-1 min-width-zero">
+                                            <div class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between">
+                                                <div class="min-width-zero">
+                                                    <p style="font-weight: bolder;" class="mb-0 font-size-16 text-dark">#API Documentation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-text-left pl-55">
+                                        <p class="mb-0 text-semi-muted"><span style="font-weight: bold;">Method:</span>POST /posts <br>Content-Type: application/json</p> <br>
+                                        <p class="mb-0 text-semi-muted"> <span style="font-weight: bold;">URL & Header:</span>curl -X POST -H "x-api-key: {{store.store_key}}" -d "store=storename&partner=partnername&email=johndoe@example.com" htps://admin.rezeet.io/api/initiate
+</p><br>
+                                        <p class="mb-0 text-semi-muted"><span style="font-weight: bold;">Body:</span><br>
+                                        <p class="mb-0 text-semi-muted">{
+                                        <p class="mb-0 text-semi-muted"><span style="color: #17c67a;">     "total": </span>"$120",</p> 
+                                        <p class="mb-0 text-semi-muted"><span style="color: #17c67a;"> "item": </span>[
+                                        <p class="mb-0 text-semi-muted">{
+                                        <p class="mb-0 text-semi-muted"><span style="color: #17c67a;">     "product":</span>"product name"</p> 
+                                        <p class="mb-0 text-semi-muted"><span style="color: #17c67a;">     "unit":</span>2</p> 
+                                        <p class="mb-0 text-semi-muted"><span style="color: #17c67a;">     "unit_price":</span>"$22"</p> 
+                                        <p class="mb-0 text-semi-muted"><span style="color: #17c67a;">     "total_price":</span>"$44"</p> 
+                                        <p class="mb-0 text-semi-muted">}
+                                        <p class="mb-0 text-semi-muted">],
+                                        <p class="mb-0 text-semi-muted">}
+
+                                    </div>
+                                </div>
+                                </div>		
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-5 col-xl-4">
+                    <div class="box box-widget widget-user">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header bg-black" style="background: url('../images/10.jpg') center center;">
+                        <h3 class="widget-user-username">{{store.name}}</h3>
+                        <h6 class="widget-user-desc">{{store.city}}</h6>
+                        </div>
+                        <div class="widget-user-image">
+                        <img class="rounded-circle" src="../images/jd.png" alt="User Avatar">
+                        </div>
+                        <div class="box-footer">
+                        <div class="row">
+                            <div class="col-sm-4">
+                            <div class="description-block">
+                                <h5 class="description-header">0</h5>
+                                <span class="description-text">Total Scan</span>
+                            </div>
+                            <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-sm-4 br-1 bl-1">
+                            <div class="description-block">
+                                <h5 class="description-header">0</h5>
+                                <span class="description-text">This Month</span>
+                            </div>
+                            <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-sm-4">
+                            <div class="description-block">
+                                <h5 class="description-header">$0</h5>
+                                <span class="description-text">Invoice</span>
+                            </div>
+                            <!-- /.description-block -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <div class="row"> <div class="input-group-append">
+                                    
+                                <div class="box-footer text-right">
+                                    <a href="/generate/{{store.id}}" class="btn btn-rounded btn-primary pull-right">
+                                    <i class="ti-settings"></i> Generate new key
+                                    </a>
+                                </div> 
+                        </div>
+                        <!-- /.row -->
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>		  
+		  </div>
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
